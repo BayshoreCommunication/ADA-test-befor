@@ -1,45 +1,52 @@
-import Head from "@/components/Head";
-import SmoothScrolling from "@/components/motion/SmoothScrolling";
-import Facebook from "@/components/universal/MessengerChatBot";
-import Script from "next/script";
-import { ReactNode } from "react";
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
+import type { Metadata } from "next";
 import "./globals.css";
+import { Providers } from "./providers";
+import localFont from "next/font/local";
 
-const RootLayout = ({ children }: { children: ReactNode }) => {
+// TAN ANGLETON (Headline)
+const tanAngleton = localFont({
+  src: "./fonts/TAN - Angleton Regular.ttf",
+  variable: "--font-heading",
+  display: "swap",
+});
+
+// CANVA SANS (Body + Subheadline)
+const canvaSans = localFont({
+  src: [
+    {
+      path: "./fonts/canva-sans-regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-body",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "Medical Weight Loss",
+  description: "Medical Weight Loss website",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en">
-      <Head />
+    <html
+      lang="en"
+      className={`${tanAngleton.variable} ${canvaSans.variable}`}
+    >
       <body>
-        {/* Google Tag Manager - noscript fallback */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-NN7P643"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
-
-        {/* Google Tag Manager - main script */}
-        <Script
-          id="google-tag-manager"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-KQG7GW2V');
-            `,
-          }}
-        />
-
-        <SmoothScrolling>{children}</SmoothScrolling>
-        <Facebook />
+        <Providers>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
-};
-
-export default RootLayout;
+}

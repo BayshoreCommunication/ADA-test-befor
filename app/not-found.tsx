@@ -1,26 +1,21 @@
-"use client";
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 const NotFound = () => {
-  const router = useRouter();
-
-  // auto redirect to home page
-  useEffect(() => {
-    setTimeout(() => {
-      router.back();
-    }, 1000);
-  }, [router]);
-
   return (
-    <div className="h-screen justify-center items-center">
-      <h1 className="text-center text-3xl font-bold mt-20">
-        Page not found, redirecting...
+    <div className="text-center my-20 flex flex-col gap-4 justify-center items-center text-[#132841] main-container pt-20 md:pt-40">
+      <h1 className="font-extrabold text-7xl lg:text-9xl text-[#132841]">
+        Oops
       </h1>
-      <button className="btn mt-10 mx-auto" onClick={() => router.back()}>
-        Go back
-      </button>
+      <p className="mt-5 font-bold text-lg">404 - PAGE NOT FOUND</p>
+      <div>
+        <p>The page you looking for might have been removed, or</p>
+        <p>{`had it's name changed or is temporarily unavailable`}</p>
+      </div>
+      <Link href={"/"}>
+        <button className="bg-emerald-teal text-soft-white hover:bg-burnt-copper px-6 py-3 rounded-lg font-semibold transition duration-300">
+          GO TO HOMEPAGE
+        </button>
+      </Link>
     </div>
   );
 };
