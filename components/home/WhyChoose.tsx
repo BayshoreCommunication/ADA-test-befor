@@ -93,7 +93,7 @@ export default function WhyChoose() {
                 href={card.href}
                 className="group bg-white rounded-2xl shadow-md p-8 flex items-center justify-center md:items-start flex-col text-center md:text-left hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer h-full"
               >
-                <span className="text-gray-400 font-semibold mb-4">
+                <span className="text-gray-700 font-semibold mb-4">
                   /{card.id}
                 </span>
                 <div className="md:ml-[-20px] flex items-center justify-center rounded-full text-2xl  mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -102,7 +102,7 @@ export default function WhyChoose() {
                 <h3 className="font-semibold text-xl mb-2 group-hover:text-primary transition-colors duration-300">
                   {card.title}
                 </h3>
-                <p className="text-gray-600 text-sm group-hover:text-gray-700 transition-colors duration-300">
+                <p className="text-gray-700 text-sm group-hover:text-gray-800 transition-colors duration-300">
                   {card.text}
                 </p>
               </Link>
