@@ -1,5 +1,4 @@
 import About from "@/components/home/About";
-import Blog from "@/components/home/Blog";
 import Hero from "@/components/home/hero";
 import MedicalWeight from "@/components/home/MedicalWeight";
 import NewPatientSpecial from "@/components/home/NewPatientSpecial";
@@ -22,8 +21,7 @@ export default function Home() {
       <OurTeam />
       <Transformation />
       <PainRelief />
-      <Faq/>
-      {/* <Blog /> */}
+      <Faq />
     </>
   );
 }

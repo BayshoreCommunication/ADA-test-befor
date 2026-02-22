@@ -41,9 +41,15 @@ export default function RootLayout({
       className={`${tanAngleton.variable} ${canvaSans.variable}`}
     >
       <body>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-white focus:text-black focus:px-4 focus:py-2 focus:rounded-md focus:shadow-md"
+        >
+          Skip to main content
+        </a>
         <Providers>
           <Navbar />
-          <main>{children}</main>
+          <main id="main-content">{children}</main>
           <Footer />
         </Providers>
       </body>

@@ -159,7 +159,7 @@ export default function TransformationSection() {
                           <div className="rounded-lg overflow-hidden w-full h-[400px] relative">
                             <Image
                               src={slide.before}
-                              alt="Before"
+                              alt={`${slide.name} before photo`}
                               fill
                               className="object-cover object-center w-full h-full"
                             />
@@ -174,7 +174,7 @@ export default function TransformationSection() {
                           <div className="rounded-lg overflow-hidden w-full h-[400px] relative">
                             <Image
                               src={slide.after}
-                              alt="After"
+                              alt={`${slide.name} after photo`}
                               fill
                               className="object-cover object-center w-full h-full"
                             />
@@ -262,12 +262,20 @@ export default function TransformationSection() {
                 ))}
 
                 {/* Navigation */}
-                <div className="prev-btn absolute top-1/2 left-0 transform -translate-y-1/2 w-9 h-9 flex items-center justify-center bg-black text-white rounded-full cursor-pointer z-20">
-                  ‹
-                </div>
-                <div className="next-btn absolute top-1/2 right-0 transform -translate-y-1/2 w-9 h-9 flex items-center justify-center bg-black text-white rounded-full cursor-pointer z-20">
-                  ›
-                </div>
+                <button
+                  type="button"
+                  aria-label="Previous transformation slide"
+                  className="prev-btn absolute top-1/2 left-0 transform -translate-y-1/2 w-9 h-9 flex items-center justify-center bg-black text-white rounded-full cursor-pointer z-20"
+                >
+                  <span aria-hidden="true">&lsaquo;</span>
+                </button>
+                <button
+                  type="button"
+                  aria-label="Next transformation slide"
+                  className="next-btn absolute top-1/2 right-0 transform -translate-y-1/2 w-9 h-9 flex items-center justify-center bg-black text-white rounded-full cursor-pointer z-20"
+                >
+                  <span aria-hidden="true">&rsaquo;</span>
+                </button>
 
                 {/* Pagination */}
                 <div className="custom-pagination flex justify-center gap-2 mt-6 relative z-20"></div>
@@ -331,3 +339,5 @@ export default function TransformationSection() {
     </div>
   );
 }
+
+

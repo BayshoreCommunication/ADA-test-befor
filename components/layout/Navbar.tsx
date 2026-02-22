@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronDown, Menu, Phone, X } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -53,7 +53,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center justify-center transition-all duration-500 w-[200px]">
             <Image
               src="/images/hero/logo.png"
-              alt="Logo"
+              alt="Medical Weight Loss Tampa logo"
               width={isSticky ? 100 : 200}
               height={isSticky ? 100 : 200}
               className={`transition-all duration-500 ${
@@ -70,7 +70,7 @@ export default function Navbar() {
           >
             <Image
               src="/images/hero/logo.png"
-              alt="Logo"
+              alt="Medical Weight Loss Tampa logo"
               width={isSticky ? 80 : 140}
               height={isSticky ? 80 : 140}
               className={`transition-all duration-500 ${
@@ -90,6 +90,7 @@ export default function Navbar() {
                     ? "text-primary font-medium underline"
                     : "hover:text-primary"
                 }`}
+                aria-current={pathname === item.href ? "page" : undefined}
               >
                 {item.label}
               </Link>
@@ -102,23 +103,30 @@ export default function Navbar() {
               href="tel:8139602225"
               className="flex items-center gap-2 px-5 py-2 rounded-full bg-black text-white font-medium hover:bg-primary transition-colors"
             >
-              <Phone size={18} />
+              <Phone size={18} aria-hidden="true" />
               813.269.7546
             </Link>
           </div>
 
           {/* Mobile Hamburger */}
           <button
+            type="button"
             className="md:hidden flex items-center ml-auto"
             onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-navigation"
           >
-            {mobileOpen ? <X size={28} /> : <Menu size={28} />}
+            {mobileOpen ? <X size={28} aria-hidden="true" /> : <Menu size={28} aria-hidden="true" />}
           </button>
         </div>
 
         {/* Mobile Nav */}
         {mobileOpen && (
-          <div className="md:hidden bg-white px-8 py-4 flex flex-col space-y-4 text-gray-800 font-medium border-t shadow-sm">
+          <div
+            id="mobile-navigation"
+            className="md:hidden bg-white px-8 py-4 flex flex-col space-y-4 text-gray-800 font-medium border-t shadow-sm"
+          >
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -129,6 +137,7 @@ export default function Navbar() {
                     ? "text-primary font-semibold"
                     : "hover:text-primary"
                 }`}
+                aria-current={pathname === item.href ? "page" : undefined}
               >
                 {item.label}
               </Link>

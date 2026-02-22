@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
-import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Faq() {
   return (
@@ -15,9 +14,7 @@ export default function Faq() {
       {/* FAQ Content */}
       <div className="space-y-8 text-gray-700 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
         <div>
-          <p className="font-semibold text-gray-900 mb-2 ">
-            Do you accept insurance?
-          </p>
+          <p className="font-semibold text-gray-900 mb-2 ">Do you accept insurance?</p>
           <p>
             Yes! We work with most insurance companies and accept many payment
             options, such as CareCredit and HSA/FSA.
@@ -25,14 +22,19 @@ export default function Faq() {
         </div>
 
         <div>
-          <p className="font-semibold text-gray-900 mb-2 ">
-            Are you accepting new patients?
-          </p>
+          <p className="font-semibold text-gray-900 mb-2 ">Are you accepting new patients?</p>
           <p>
             Yes! Click the{" "}
-            <Link href="https://portal.sked.life/new-patient/time?key=489579519b65115ba47eec5ca31a717befcba2464a5491dc864e7173c4e6cfe6&from="><span className="text-primary font-medium pointer">Book Now</span></Link> button 
-            and take advantage of our new patient special! We also treat Auto
-            Accidents, Workman&apos;s Comp, and Slip &amp; Fall cases.
+            <Link
+              href="https://portal.sked.life/new-patient/time?key=489579519b65115ba47eec5ca31a717befcba2464a5491dc864e7173c4e6cfe6&from="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary font-medium"
+            >
+              Book Now
+            </Link>{" "}
+            button and take advantage of our new patient special! We also treat
+            Auto Accidents, Workman&apos;s Comp, and Slip &amp; Fall cases.
           </p>
           <div className="mt-4 text-primary">
             <a

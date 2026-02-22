@@ -1,7 +1,7 @@
 // components/Reveal.tsx
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { ReactNode } from "react";
 
 const tagMap = {
@@ -59,6 +59,7 @@ export default function Reveal({
   once = true,
   amount = 0.4,
 }: RevealProps) {
+  const shouldReduceMotion = useReducedMotion();
   const Cmp = tagMap[tag] ?? motion.div;
 
   const variants = {
@@ -75,8 +76,8 @@ export default function Reveal({
     <Cmp
       className={className}
       variants={variants}
-      initial="hidden"
-      whileInView="visible"
+      initial={shouldReduceMotion ? false : "hidden"}
+      whileInView={shouldReduceMotion ? undefined : "visible"}
       viewport={{ once, amount }}
     >
       {children}

@@ -170,29 +170,6 @@ const VitaminsPeptidesPage = () => {
                   <p className="text-gray-600 text-base mt-2 mb-6 ">
                     {service.details}
                   </p>
-
-                  {/* <Link
-                    href="/https://portal.sked.life/new-patient/time?key=1b956e69d5481378e8b8687477eab43daee76cd6dfbd65f6b9f53c4f13a25331&from="
-                    target="_blank"
-                    className="inline-flex gap-2 items-center px-6 py-3 bg-black text-white text-sm font-medium rounded-full hover:bg-primary transition"
-                  >
-                    Not a Patient Yet? Schedule Today!
-                    <div className="bg-white shrink-0  rounded-full w-5 h-5 flex items-center justify-center text-black">
-                      <svg
-                        className="w-4 h-4 "
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
-                    </div>
-                  </Link> */}
                 </div>
               </div>
             ))}

@@ -20,9 +20,10 @@ export default function NewPatientSpecial() {
         <Link
           href="https://portal.sked.life/new-patient/time?key=1b956e69d5481378e8b8687477eab43daee76cd6dfbd65f6b9f53c4f13a25331&from="
           target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-primary text-white font-medium text-base md:text-lg px-6 py-3 rounded-full shadow-md hover:bg-primary/90 transition-all duration-300"
         >
-          Claim Your Offer <FaArrowRight className="text-white" />
+          Claim Your Offer <FaArrowRight className="text-white" aria-hidden="true" />
         </Link>
 
         <p className="text-gray-500 text-sm mt-4">

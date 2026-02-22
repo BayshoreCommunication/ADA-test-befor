@@ -36,8 +36,9 @@ export default function Footer() {
                 href="https://www.facebook.com/MedicalWeightLossTampa"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit our Facebook page"
               >
-                <FaFacebookF />
+                <FaFacebookF aria-hidden="true" />
               </Link>
               {/* <Link
                 href="https://twitter.com/jachimekchiro"
@@ -50,8 +51,9 @@ export default function Footer() {
                 href="https://www.instagram.com/medicalweightlosstampa?igsh=M2dmeGVicW9zbGFo"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit our Instagram page"
               >
-                <FaInstagram />
+                <FaInstagram aria-hidden="true" />
               </Link>
               {/* <Link
                 href="https://www.linkedin.com/company/jachimekchiropractic"

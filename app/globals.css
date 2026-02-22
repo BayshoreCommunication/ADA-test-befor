@@ -50,6 +50,23 @@
 .animate-slideDown {
   animation: slideDown 0.7s ease forwards;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-up,
+  .reveal-down,
+  .reveal-left,
+  .reveal-right,
+  .reveal-fade {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .animate-slideDown {
+    animation: none !important;
+  }
+}
 :root {
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);

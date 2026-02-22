@@ -68,10 +68,11 @@ export default function Hero() {
           <Link
             href="https://portal.sked.life/new-patient/time?key=1b956e69d5481378e8b8687477eab43daee76cd6dfbd65f6b9f53c4f13a25331&from="
             target="_blank"
+            rel="noopener noreferrer"
             className="px-6 py-3 rounded-full bg-[#4E741E] text-white font-medium hover:bg-[#4E741E]/90 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 justify-center gap-2 w-[350px] mx-auto text-base"
           >
             <span>Not a patient yet? Book Now!</span>
-            <div className="bg-white rounded-full p-1">
+            <div className="bg-white rounded-full p-1" aria-hidden="true">
               <IoIosArrowForward className="text-[#4E741E] size-4" />
             </div>
           </Link>

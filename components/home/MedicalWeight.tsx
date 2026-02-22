@@ -66,11 +66,12 @@ export default function MedicalWeightLoss() {
             </Reveal>
           </div>
           <Reveal tag="div" delay={0.2}>
-            <Link href="/our-services">
-            <button className="mt-4 md:mt-0 border border-black rounded-full px-6 py-2 font-medium flex items-center gap-2 hover:bg-black hover:text-white transition ">
+            <Link
+              href="/our-services"
+              className="mt-4 md:mt-0 border border-black rounded-full px-6 py-2 font-medium inline-flex items-center gap-2 hover:bg-black hover:text-white transition"
+            >
               Explore More Services
-              <span>→</span>
-            </button>
+              <span aria-hidden="true">-&gt;</span>
             </Link>
           </Reveal>
         </div>
@@ -95,7 +96,7 @@ export default function MedicalWeightLoss() {
                 <h3 className="text-lg font-semibold text-gray-800 group-hover:text-primary transition-colors duration-300">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 text-sm mt-2 w-[300px] group-hover:text-gray-700 transition-colors duration-300  line-clamp-3">
+                <p className="text-gray-600 text-sm mt-2 w-[300px] group-hover:text-gray-700 transition-colors duration-300 line-clamp-3">
                   {service.desc}
                 </p>
               </Link>

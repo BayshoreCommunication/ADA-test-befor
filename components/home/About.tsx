@@ -49,14 +49,12 @@ export default function About() {
 
             {/* Explore More button */}
             <Reveal tag="div" delay={0.15}>
-              <button className="bg-black text-white px-6 py-3 rounded-full w-fit transition mb-8 hover:bg-white hover:border hover:border-black hover:text-black">
-                <Link
-                  href="/team"
-                  className="inline-flex items-center gap-2 text-white font-medium transition hover:text-black"
-                >
-                  Explore More <ArrowRight size={18} />
-                </Link>
-              </button>
+              <Link
+                href="/team"
+                className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full w-fit transition mb-8 hover:bg-white hover:border hover:border-black hover:text-black font-medium"
+              >
+                Explore More <ArrowRight size={18} aria-hidden="true" />
+              </Link>
             </Reveal>
 
             {/* Google Reviews */}
@@ -79,6 +77,8 @@ export default function About() {
                 <div>
                   <Link
                     href="https://share.google/gvEBvr3N2B1QK82KM"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-primary underline hover:text-green-700"
                   >
                     View all Google Reviews here

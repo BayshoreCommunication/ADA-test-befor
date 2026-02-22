@@ -11,10 +11,11 @@ const NotFound = () => {
         <p>The page you looking for might have been removed, or</p>
         <p>{`had it's name changed or is temporarily unavailable`}</p>
       </div>
-      <Link href={"/"}>
-        <button className="bg-emerald-teal text-soft-white hover:bg-burnt-copper px-6 py-3 rounded-lg font-semibold transition duration-300">
-          GO TO HOMEPAGE
-        </button>
+      <Link
+        href="/"
+        className="bg-emerald-teal text-soft-white hover:bg-burnt-copper px-6 py-3 rounded-lg font-semibold transition duration-300 inline-flex"
+      >
+        GO TO HOMEPAGE
       </Link>
     </div>
   );
