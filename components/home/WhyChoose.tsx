@@ -55,35 +55,9 @@ export default function WhyChoose() {
   return (
     <section className="max-w-[1640px] mx-auto px-8 md:my-16 my-8">
       {/* Grid with custom 70/30 split */}
-      <div className="grid grid-cols-1 lg:grid-cols-[70%_30%]  items-start gap-6">
-        {/* Left: Cards */}
-        <Reveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {cards.map((card) => (
-              <Link
-                key={card.id}
-                href={card.href}
-                className="group bg-white rounded-2xl shadow-md p-8 flex items-center justify-center md:items-start flex-col text-center md:text-left hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer h-full"
-              >
-                <span className="text-gray-400 font-semibold mb-4">
-                  /{card.id}
-                </span>
-                <div className="md:ml-[-20px] flex items-center justify-center rounded-full text-2xl  mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {card.icon}
-                </div>
-                <h3 className="font-semibold text-xl mb-2 group-hover:text-primary transition-colors duration-300">
-                  {card.title}
-                </h3>
-                <p className="text-gray-600 text-sm group-hover:text-gray-700 transition-colors duration-300">
-                  {card.text}
-                </p>
-              </Link>
-            ))}
-          </div>
-        </Reveal>
-
+      <div className="grid grid-cols-1 lg:grid-cols-[70%_30%] items-start gap-6">
         {/* Right: Text Content */}
-        <div>
+        <div className="order-2 lg:order-none lg:col-start-2">
           <Reveal
             tag="h2"
             className="text-3xl font-bold text-gray-900 leading-snug mb-4"
@@ -109,6 +83,32 @@ export default function WhyChoose() {
             </Link>
           </Reveal>
         </div>
+
+        {/* Left: Cards */}
+        <Reveal className="order-1 lg:order-none lg:col-start-1 lg:row-start-1">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {cards.map((card) => (
+              <Link
+                key={card.id}
+                href={card.href}
+                className="group bg-white rounded-2xl shadow-md p-8 flex items-center justify-center md:items-start flex-col text-center md:text-left hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer h-full"
+              >
+                <span className="text-gray-400 font-semibold mb-4">
+                  /{card.id}
+                </span>
+                <div className="md:ml-[-20px] flex items-center justify-center rounded-full text-2xl  mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {card.icon}
+                </div>
+                <h3 className="font-semibold text-xl mb-2 group-hover:text-primary transition-colors duration-300">
+                  {card.title}
+                </h3>
+                <p className="text-gray-600 text-sm group-hover:text-gray-700 transition-colors duration-300">
+                  {card.text}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </section>
   );

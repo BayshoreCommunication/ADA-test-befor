@@ -80,15 +80,15 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden md:flex space-x-6 items-center text-sm text-gray-800 font-medium bg-gray-200 px-8 py-2 rounded-full">
+          <nav className="hidden md:flex space-x-6 items-center text-sm text-gray-900 font-medium bg-gray-100 px-8 py-2 rounded-full">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className={`transition-colors ${
                   pathname === item.href
-                    ? "text-primary font-medium underline"
-                    : "hover:text-primary"
+                    ? "text-[#2f4a10] font-semibold underline"
+                    : "hover:text-[#2f4a10]"
                 }`}
                 aria-current={pathname === item.href ? "page" : undefined}
               >
@@ -134,8 +134,8 @@ export default function Navbar() {
                 onClick={() => setMobileOpen(false)}
                 className={`transition-colors ${
                   pathname === item.href
-                    ? "text-primary font-semibold"
-                    : "hover:text-primary"
+                    ? "text-[#2f4a10] font-semibold"
+                    : "hover:text-[#2f4a10]"
                 }`}
                 aria-current={pathname === item.href ? "page" : undefined}
               >

@@ -5,14 +5,14 @@ import { FaArrowRight } from "react-icons/fa";
 
 export default function NewPatientSpecial() {
   return (
-    <section className="bg-primary/10 py-16 px-6 md:px-12">
+    <section className="bg-[#eef5e3] py-16 px-6 md:px-12">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           $47 New Patient Special Offer
         </h2>
-        <p className="text-base md:text-lg text-gray-700 mb-8 leading-relaxed">
+        <p className="text-base md:text-lg text-gray-800 mb-8 leading-relaxed">
           Experience a comprehensive weight loss consultation, health
-          assessment, and personalized treatment plan for just <span className="font bold text-primary">$47</span> . Discover how
+          assessment, and personalized treatment plan for just <span className="font-bold text-[#2f4a10]">$47</span>. Discover how
           our medically guided programs can help you lose weight safely, boost
           your energy, and feel your best again.
         </p>
@@ -26,7 +26,7 @@ export default function NewPatientSpecial() {
           Claim Your Offer <FaArrowRight className="text-white" aria-hidden="true" />
         </Link>
 
-        <p className="text-gray-500 text-sm mt-4">
+        <p className="text-gray-700 text-sm mt-4">
           *Offer valid for new patients only. Restrictions may apply.
         </p>
       </div>
