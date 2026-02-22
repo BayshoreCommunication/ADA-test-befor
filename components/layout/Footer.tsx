@@ -87,7 +87,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/meet-the-team" className="hover:text-primary">
+                <Link href="/team" className="hover:text-primary">
                   Meet The Team
                 </Link>
               </li>
@@ -107,7 +107,7 @@ export default function Footer() {
               </li> */}
               <li>
                 <Link
-                  href="/vitamins-and-peptides"
+                  href="/vitamins-peptides"
                   className="hover:text-primary"
                 >
                   Vitamins & Peptides

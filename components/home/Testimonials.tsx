@@ -183,7 +183,8 @@ export default function Testimonials() {
                 </div>
 
                 {/* Rating */}
-                <div className="flex items-center mb-3" aria-label={`${testimonial.rating} out of 5 stars`}>
+                <div className="flex items-center mb-3">
+                  <span className="sr-only">{`${testimonial.rating} out of 5 stars`}</span>
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
                     <span key={i} className="text-orange-500 text-lg" aria-hidden="true">
                       *
@@ -246,7 +247,8 @@ export default function Testimonials() {
                 </div>
 
                 {/* Rating */}
-                <div className="flex items-center mb-3" aria-label={`${testimonial.rating} out of 5 stars`}>
+                <div className="flex items-center mb-3">
+                  <span className="sr-only">{`${testimonial.rating} out of 5 stars`}</span>
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
                     <span key={i} className="text-orange-500 text-lg" aria-hidden="true">
                       *
